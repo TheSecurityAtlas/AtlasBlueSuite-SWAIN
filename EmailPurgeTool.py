@@ -8,7 +8,7 @@ os.environ["COMSPEC"] = "powershell"
 # domain email needed to insert into IPPSSession | Connecting to ExchangeOnlineManagement
 Email = input("Please provide your domain email address ")
 
-sp.run(f"Connect-IPPSSession -UserPrincipalName {Email}", shell=True)
+sp.Popen.wait(f"Connect-IPPSSession -UserPrincipalName {Email}", timeout=None)
 
 # ask user name of content search | Will inject into PS script
 Search_Name = input("What is the name of the Content Search? ")
