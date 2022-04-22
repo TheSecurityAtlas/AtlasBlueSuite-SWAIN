@@ -17,6 +17,6 @@ Purge_Type = input("Would you like to SoftDelete or HardDelete? ")
 Email_Purge = f"Connect-IPPSSession -UserPrincipalName {Email} ; New-ComplianceSearchAction -SearchName {Search_Name!r} -purge -PurgeType {Purge_Type}"
 
 if Purge_Type == "SoftDelete" or Purge_Type == "HardDelete":
-    sp.run(Email_Purge)
+    sp.run(Email_Purge, shell=True)
 else:
     print("Please enter [SoftDelete] or [HardDelete]")
