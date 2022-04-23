@@ -1,3 +1,5 @@
+# this file is only used as reference for logic lessons
+
 # importing modules
 import subprocess as sp
 import os
