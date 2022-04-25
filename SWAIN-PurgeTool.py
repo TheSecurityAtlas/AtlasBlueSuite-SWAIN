@@ -43,5 +43,5 @@ def SWAIN():
 
 
 
-Info_print = print("Search Query Quick Reference Guide: \nFor more about Search Query Syntax please visit Syntax_Guide.txt\n\nFrom\n  from:<email@domain.com> -- can also be just domain: from:<domain.com>\n\nRecipients (includes all recipients in 'To' 'cc' 'bcc')\n recipients:<email@domain.com> can also be just domain: recipients:<domain.com>")
+Info_print = print("Search Query Quick Reference Guide: \nFor more about Search Query Syntax please visit Syntax_Guide.txt\n\nFrom\n  from:<email@domain.com> -- can also be just domain: from:<domain.com>\n\nRecipients (includes all recipients in 'To' 'cc' 'bcc')\n  recipients:<email@domain.com> can also be just domain: recipients:<domain.com>\n\nSubject \nthe query doesn't return only those messages that have an exact match. \n  subject:'Q<insert subject here> \n\nReceived \nThe date that an email message was received by a recipient \n  received:2021-04-15 -- date is a single day \n received>=2021-01-01 AND received<=2021-03-31 -- date is a range")
 
