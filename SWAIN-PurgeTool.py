@@ -9,14 +9,18 @@ import os
 os.environ["COMSPEC"] = "powershell"
 
 def CSCT():
+    
+    Info_print = print("Search Query Quick Reference Guide: \nFor more about Search Query Syntax please visit Syntax_Guide.txt\n'from'")
+    
     CSCT_Connect = input("Please provide your domain email address: ")
     CSCT_Name = input("What is the name of your Content Search? ")
     CSCT_Description = input("Please give this Content Search a concise description: ")
     CSCT_Location = input("Which mailboxes would you like to search? 'Please use (All) to search all mailboxes': ")
+    Info_print
     CSCT_Query = input("What are the search parameters? (Please consult the 'Search Parameters.txt' documentations) : ")
         
     sp.run(f"Connect-IPPSSession -UserPrincipalName {CSCT_Connect} ; New-ComplianceSearch -Name {CSCT_Name!r} -AllowNotFoundExchangeLocationsEnabled $true -ContentMatchQuery {CSCT_Query!r} -Description {CSCT_Description!r} -ExchangeLocation {CSCT_Location} ; Start-ComplianceSearch -Identity {CSCT_Name}", shell=True)
-    print(f"{CSCT_Name} has been started, Search will be complete soon, please wait 2-5 minitues")
+    print(f"{CSCT_Name} has been started, Search will be complete soon, please wait 2-5 minitues: Happy Hunting")
 
 def SWAIN():
     Email = input("Please provide your domain email address ")
@@ -39,5 +43,5 @@ def SWAIN():
 
 
 
-print("Search Query Quick Reference Guide \nFor more about Search Query Syntax\nplease visit Syntax_Guide.txt")
+Info_print = print("Search Query Quick Reference Guide: \nFor more about Search Query Syntax please visit Syntax_Guide.txt\n\nFrom\n  from:<email@domain.com> -- can also be just domain: from:<domain.com>\n\nRecipients (includes all recipients in 'To' 'cc' 'bcc')\nrecipients:<email@domain.com> can also be just domain: recipients:<domain.com>")
 
