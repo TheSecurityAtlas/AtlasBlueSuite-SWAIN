@@ -1,4 +1,4 @@
-# import Andrew Heishman as TheSecurityAtlas
+# import Author as Andrew Heishman
 # v1.2
 
 # importing modules
