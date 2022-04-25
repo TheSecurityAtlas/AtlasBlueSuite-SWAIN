@@ -12,6 +12,18 @@ os.environ["COMSPEC"] = "powershell"
 #    Email = input("Please provide your domain email address ")
 
 
+CSCT_Name = input("What is the name of your Content Search? ")
+CSCT_Query = input("What are the search parameters? (Please consult the 'Search Parameters.txt' documentations)")
+CSCT_Description = input("Please give this Content Search a concise description ")
+CSCT_Location = input("Which mailboxes would you like to search? 'Please use (All) to search all mailboxes'")
+
+def CSCT():
+    sp.run(f"New-ComplianceSearch -Name {CSCT_Name} -AllowNotFoundExchangeLocationsEnabled $true -Confirm -ContentMatchQuery {CSCT_Query} -Description {CSCT_Description} -ExchangeLocation {CSCT_Location}")
+   
+#   [-PublicFolderLocation <String[]>]
+#   [-StatusMailRecipients <String[]>]****
+
+
 # CSCT_Execute # var
 def SWAIN():
     Email = input("Please provide your domain email address ")
