@@ -43,5 +43,5 @@ def SWAIN():
 
 
 
-Info_print = print("Search Query Quick Reference Guide: \nFor more about Search Query Syntax please visit Syntax_Guide.txt\n\nFrom\n  from:<email@domain.com> -- can also be just domain: from:<domain.com>\n\nRecipients (includes all recipients in 'To' 'cc' 'bcc')\nrecipients:<email@domain.com> can also be just domain: recipients:<domain.com>")
+Info_print = print("Search Query Quick Reference Guide: \nFor more about Search Query Syntax please visit Syntax_Guide.txt\n\nFrom\n  from:<email@domain.com> -- can also be just domain: from:<domain.com>\n\nRecipients (includes all recipients in 'To' 'cc' 'bcc')\n recipients:<email@domain.com> can also be just domain: recipients:<domain.com>")
 
