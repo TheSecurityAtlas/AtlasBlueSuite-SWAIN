@@ -33,7 +33,6 @@ def SWAIN():
         print("Please enter [SoftDelete] or [HardDelete]")
 
 
-
 Content_Search = input("Have you started a Content Search yet? (Y) or (N) ")
 
 if Content_Search == "Y":
