@@ -8,23 +8,20 @@ import os
 # this will change the default shell to use powershell instead of cmd.exe or /bin/sh
 os.environ["COMSPEC"] = "powershell"
 
-#def CSCT():
-#    Email = input("Please provide your domain email address ")
 
 
-CSCT_Name = input("What is the name of your Content Search? ")
-CSCT_Query = input("What are the search parameters? (Please consult the 'Search Parameters.txt' documentations)")
-CSCT_Description = input("Please give this Content Search a concise description ")
-CSCT_Location = input("Which mailboxes would you like to search? 'Please use (All) to search all mailboxes'")
 
 def CSCT():
-    sp.run(f"New-ComplianceSearch -Name {CSCT_Name} -AllowNotFoundExchangeLocationsEnabled $true -Confirm -ContentMatchQuery {CSCT_Query} -Description {CSCT_Description} -ExchangeLocation {CSCT_Location}")
-   
-#   [-PublicFolderLocation <String[]>]
-#   [-StatusMailRecipients <String[]>]****
+    CSCT_Connect = input("Please provide your domain email address ")
+    CSCT_Name = input("What is the name of your Content Search? ")
+    CSCT_Description = input("Please give this Content Search a concise description ")
+    CSCT_Location = input("Which mailboxes would you like to search? 'Please use (All) to search all mailboxes' :")
+    CSCT_Query = input("What are the search parameters? (Please consult the 'Search Parameters.txt' documentations) :")
+        
+    sp.run(f"Connect-IPPSSession -UserPrincipalName {CSCT_Connect} ; New-ComplianceSearch -Name {CSCT_Name!r} -AllowNotFoundExchangeLocationsEnabled $true -ContentMatchQuery {CSCT_Query!r} -Description {CSCT_Description!r} -ExchangeLocation {CSCT_Location} ; Start-ComplianceSearch -Identity {CSCT_Name}", shell=True)
+    print(f"{CSCT_Name} has been started")
 
 
-# CSCT_Execute # var
 def SWAIN():
     Email = input("Please provide your domain email address ")
     Search_Name = input("What is the name of the Content Search? ")
@@ -36,14 +33,14 @@ def SWAIN():
         print("Please enter [SoftDelete] or [HardDelete]")
 
 
-SWAIN()
 
-#Content_Search = input("Have you started a Content Search yet? (Y) or (N) ")
+Content_Search = input("Have you started a Content Search yet? (Y) or (N) ")
 
-#if Content_Search == "Y":
-#    SWAIN()
-#elif Content_Search == "N":
-#    CSCT()
+if Content_Search == "Y":
+    SWAIN()
+elif Content_Search == "N":
+    CSCT()
+    SWAIN()
 
 
 
