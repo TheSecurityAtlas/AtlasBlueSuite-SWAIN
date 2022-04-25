@@ -39,5 +39,5 @@ def SWAIN():
 
 
 
-print("Search Query: Quick Reference Guide \nAttachmentNames  ")
+print("Search Query Quick Reference Guide \nFor more about Search Query Syntax please visit  'Syntax Guide.txt'")
 
