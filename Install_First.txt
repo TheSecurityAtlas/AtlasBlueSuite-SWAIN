@@ -1,0 +1,4 @@
+Run these powershell commands before running any SWAIN tools
+
+Install-Module -Name ExchangeOnlineManagement
+Import-Module ExchangeOnlineManagement
