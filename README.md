@@ -13,6 +13,10 @@ Code is open to use and download. an .exe of SWAIN can be found at  https://www.
 
 Some dependencies are required for this tool to work in your environment (If we have forgotten any dependencies please raise an issue so the documentation can be altered)
 
+Any feedback is welcomed. 
+
+# **GUI is coming soon**
+
 Full list of dependencies can be found in BeforeFirstRun.txt
 
 # Relavent Microsoft Docs
@@ -20,6 +24,4 @@ https://docs.microsoft.com/en-us/powershell/exchange/exchange-online-powershell-
 
 https://docs.microsoft.com/en-us/powershell/exchange/connect-to-scc-powershell?view=exchange-ps
 
-Any feedback is welcomed. 
 
-**GUI is coming soon**
