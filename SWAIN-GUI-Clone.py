@@ -3,11 +3,32 @@
 
 # importing modules
 from logging import root
+from tkinter import *
+from tkinter import ttk
 import time
 import subprocess as sp
+
 import os
 
-# this will change the default shell to use powershell instead of cmd.exe or /bin/sh
+root = Tk()
+root.title("SWAIN: Content Search & Purge Tool")
+root.geometry("500x500")
+
+mainframe = ttk.Frame(root, padding="3 3 12 12")
+mainframe.grid(column=50, row=50, sticky=(N, W, E, S))
+root.columnconfigure(0, weight=1)
+root.rowconfigure(0, weight=1)
+
+root.mainloop()
+
+
+
+
+
+
+
+
+# this will change the default shell to use powershell instead of cmd.exe
 os.environ["COMSPEC"] = "powershell"
 
 def Query_info():
@@ -37,12 +58,12 @@ def SWAIN():
     else:
         print("Please enter [SoftDelete] or [HardDelete]")
 
-Content_Search = input("Have you started a Content Search yet? (Y) or (N) ")
+#Content_Search = input("Have you started a Content Search yet? (Y) or (N) ")
 
-if Content_Search == "Y":
-    SWAIN()
-elif Content_Search == "N":
-    CSCT()
-    print("Please wait for 120 seconds...")
-    time.sleep(120)
-    SWAIN()
+#if Content_Search == "Y":
+#    SWAIN()
+#elif Content_Search == "N":
+#    CSCT()
+#    print("Please wait for 120 seconds...")
+#    time.sleep(120)
+#    SWAIN()
