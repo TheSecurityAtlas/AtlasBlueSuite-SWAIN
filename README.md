@@ -17,7 +17,9 @@ Full list of dependencies can be found in BeforeFirstRun.txt
 
 # Relavent Microsoft Docs
 https://docs.microsoft.com/en-us/powershell/exchange/exchange-online-powershell-v2?view=exchange-ps#install-and-maintain-the-exo-v2-module
+
 https://docs.microsoft.com/en-us/powershell/exchange/connect-to-scc-powershell?view=exchange-ps
+
 Any feedback is welcomed. 
 
 **GUI is coming soon**
