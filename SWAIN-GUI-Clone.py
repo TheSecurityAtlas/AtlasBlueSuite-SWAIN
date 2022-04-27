@@ -2,6 +2,7 @@
 # v1.2
 
 # importing modules
+from logging import root
 import time
 import subprocess as sp
 import os
