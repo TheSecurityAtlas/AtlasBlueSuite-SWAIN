@@ -2,6 +2,7 @@
 # v1.2
 
 # importing modules
+from multiprocessing.connection import wait
 import subprocess as sp
 import os
 
@@ -42,4 +43,3 @@ if Content_Search == "Y":
     SWAIN()
 elif Content_Search == "N":
     CSCT()
-    SWAIN()
