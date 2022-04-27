@@ -9,3 +9,4 @@ Import-Module ExchangeOnlineManagement
 
 --Permissions
 You will need to have permissions inside of your organizations Security & Compliance Center
+Including "eDiscovery Manager"
