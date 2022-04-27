@@ -2,3 +2,6 @@ Run these powershell commands before running any SWAIN tools
 
 Install-Module -Name ExchangeOnlineManagement
 Import-Module ExchangeOnlineManagement
+
+--Permissions
+You will need to have permissions inside of your organizations Security & Compliance Center
