@@ -2,7 +2,7 @@
 # v1.2
 
 # importing modules
-from multiprocessing.connection import wait
+import time
 import subprocess as sp
 import os
 
@@ -22,9 +22,8 @@ def CSCT():
     CSCT_Location = input("Which mailboxes would you like to search? 'Please use (All) to search all mailboxes' : ")
     Query_info()
     CSCT_Query = input("What are the search parameters? ")
-        
     sp.run(f"Connect-IPPSSession -UserPrincipalName {CSCT_Connect} ; New-ComplianceSearch -Name {CSCT_Name!r} -AllowNotFoundExchangeLocationsEnabled $true -ContentMatchQuery {CSCT_Query!r} -Description {CSCT_Description!r} -ExchangeLocation {CSCT_Location} ; Start-ComplianceSearch -Identity {CSCT_Name}", shell=True)
-    print(f"{CSCT_Name} has been started, Search will be complete soon, please wait 2-5 minitues: Happy Hunting")
+    print(f"{CSCT_Name} has been started, Search will be complete soon, Happy Hunting!")
 
 def SWAIN():
     print("\n\nWelcome to SWAIN: Email Purge Tool")
@@ -43,3 +42,6 @@ if Content_Search == "Y":
     SWAIN()
 elif Content_Search == "N":
     CSCT()
+    print("Please wait for 120 seconds...")
+    time.sleep(120)
+    SWAIN()
