@@ -1,5 +1,7 @@
 # AtlasSuite-SWAIN
 
+if this tool benefitted you in any way, please consider [Buying Us a Coffee!](https://www.buymeacoffee.com/TheSecAtlas)
+
 
 ## SWAIN was designed to help CyberDefenders automate features included in Defender 365 (O365)
 
