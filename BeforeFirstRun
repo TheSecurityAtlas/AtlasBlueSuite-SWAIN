@@ -1,10 +1,8 @@
-You might need to run:
-"Set-ExecutionPolicy RemoteSigned"
-which will require running Powershell as an admin.
-
 Run these powershell commands before running any SWAIN tools
 
 Install-Module -Name ExchangeOnlineManagement
+(You might need to run:
+"Set-ExecutionPolicy RemoteSigned" which will require running Powershell as an admin.)
 Import-Module ExchangeOnlineManagement
 
 --Permissions
