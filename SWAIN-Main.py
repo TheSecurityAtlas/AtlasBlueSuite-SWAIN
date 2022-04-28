@@ -33,11 +33,12 @@ def SWAIN():
     Email_Purge = f"Connect-IPPSSession -UserPrincipalName {Email} ; New-ComplianceSearchAction -SearchName {Search_Name!r} -purge -PurgeType {Purge_Type}"
     if Purge_Type == "SoftDelete" or Purge_Type == "HardDelete":
         sp.run(Email_Purge, shell=True)
+        print(f"\n\n{Search_Name} has been started. \nIf you would like to see the status of your purge -- please use Get-ComplianceSearchAction <insert name here> (remember to include _purge) ")
         input("Please press enter to close this application")
     else:
         print("Please enter [SoftDelete] or [HardDelete]")
 
-Content_Search = input("Welcome to SWAIN!\n\n This tool will start the purging process by having you create a 'Content Search' first\n If you have already created a Content Search you can skip right to the purge tool by answering 'Y'\n\nHave you started a Content Search yet? (Y) or (N) ")
+Content_Search = input("Welcome to SWAIN!\n\nThis tool will start the purging process by having you create a 'Content Search' first\nIf you have already created a Content Search you can skip right to the purge tool by answering 'Y'\n\nHave you started a Content Search yet? (Y) or (N) ")
 
 if Content_Search == "Y":
     SWAIN()
