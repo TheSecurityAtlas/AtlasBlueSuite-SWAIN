@@ -24,3 +24,4 @@ https://docs.microsoft.com/en-us/powershell/exchange/exchange-online-powershell-
 https://docs.microsoft.com/en-us/powershell/exchange/connect-to-scc-powershell?view=exchange-ps
 
 
+Special credit goes to [Raging-loon](https://github.com/raging-loon) for his contributions to this project.
