@@ -5,6 +5,6 @@ Install-Module -Name ExchangeOnlineManagement
 "Set-ExecutionPolicy RemoteSigned" which will require running Powershell as an admin.)
 Import-Module ExchangeOnlineManagement
 
---Permissions--
+ --Permissions--
 You will need to have permissions inside of your organizations Security & Compliance Center
 Including "eDiscovery Manager"
