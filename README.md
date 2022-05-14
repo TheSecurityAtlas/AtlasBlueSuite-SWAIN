@@ -7,7 +7,7 @@ if this tool benefitted you in any way, please consider [Buying Us a Coffee!](ht
 
 The first section of SWAIN is the CSCT: Content Search Creation Tool. The second section of SWAIN is the PurgeTool.
 
-The Defender 365 admin portal is very clunky and takes way too long. This combined with Security Teams around the world having problems purging email is what birthed SWAIN. No matter what your budget, you should be able to defend against the most prevalent threat that Blue Teams face: Spam and Phishing.
+The Microsoft Purview admin portal is very clunky and takes way too long. This combined with Security Teams around the world having problems purging email is what birthed SWAIN. No matter what your budget, you should be able to defend against the most prevalent threat that Blue Teams face: Spam and Phishing.
 
 Some dependencies are required for this tool to work in your environment (If we have forgotten any dependencies please raise an issue so the documentation can be altered)
 
