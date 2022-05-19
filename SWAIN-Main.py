@@ -44,7 +44,7 @@ if Content_Search == "Y":
     SWAIN()
 elif Content_Search == "N":
     CSCT()
-    print("Please wait for 120 seconds...")
-    time.sleep(120)
+    print("Content search should take about 2 - 5 minutes")
+    time.sleep(300)
     SWAIN()
     
