@@ -1,8 +1,3 @@
-# AtlasSuite-SWAIN
-
-if this tool benefitted you in any way, please consider [Buying Us a Coffee!](https://www.buymeacoffee.com/TheSecAtlas)
-
-
 ## SWAIN was designed to help CyberDefenders automate features included in Microsoft Purview (O365)
 
 The first section of SWAIN is the CSCT: Content Search Creation Tool. The second section of SWAIN is the PurgeTool.
@@ -23,5 +18,6 @@ https://docs.microsoft.com/en-us/powershell/exchange/exchange-online-powershell-
 
 https://docs.microsoft.com/en-us/powershell/exchange/connect-to-scc-powershell?view=exchange-ps
 
+if this tool benefitted you in any way, please consider [Buying Us a Coffee!](https://www.buymeacoffee.com/TheSecAtlas)
 
 Special credit goes to [Raging-loon](https://github.com/raging-loon) for his contributions to this project.
