@@ -4,7 +4,7 @@ The first section of SWAIN is the CSCT: Content Search Creation Tool. The second
 
 If you want to run both of them in the same console. please use main.py
 
-The Microsoft Purview admin portal is very clunky and takes way too long. This combined with Security Teams around the world having problems purging email is what birthed SWAIN. No matter what your budget, you should be able to defend against the most prevalent threat that Blue Teams face: Spam and Phishing.
+The Microsoft Purview admin portal is very clunky and takes way too long to load. This combined with Security Teams around the world having problems purging email is what birthed SWAIN. No matter what your budget, you should be able to defend against the most prevalent threat that Blue Teams face: Spam and Phishing.
 
 Some dependencies are required for this tool to work in your environment (If we have forgotten any dependencies please raise an issue so the documentation can be altered)
 
