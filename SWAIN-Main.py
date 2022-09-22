@@ -5,7 +5,7 @@
 import time
 import subprocess as sp
 import os
-
+import urllib.request
 # this will change the default shell to use powershell instead of cmd
 os.environ["COMSPEC"] = "powershell"
 progress = list(range(0, 2))
@@ -63,4 +63,6 @@ while True:
     elif Main_Query == "3":
         print("This is a test string")
         ProgressBar()
+    elif Main_Query == "S":
+        print("https://github.com/TheSecurityAtlas/AtlasBlueSuite-SWAIN/blob/main/Syntax_Guide.txt")
 
