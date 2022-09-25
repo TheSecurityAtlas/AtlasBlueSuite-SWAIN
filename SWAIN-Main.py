@@ -36,7 +36,7 @@ def ProgressBar():
         SWAIN_bar(i + 1, l, prefix = 'Progress:', suffix = 'Complete', length = 50)
 
 # function for finding email -- including powershell commands
-def CSCT():
+def SWAIN_CSCT():
     print("\n\nWelcome to the CSCT: Content Search Creation Tool")
     CSCT_Connect = input("Please provide your domain email address: ")
     CSCT_Name = input("What is the name of your Content Search? ")
@@ -59,11 +59,17 @@ def SWAIN():
     else:
         print("Please enter 'SoftDelete' or 'HardDelete'")
 
+#def SWAIN_block():
+#    Email = input("Please provide your domain email address ")
+#    Email_blocking = input("Please enter the email you would like to block ")
+#    block_query = f"Connect-IPPSSession -UserPrincipalName {Email} ; New-TenantAllowBlockListItems -ListType Sender -Block -Entries "{Email_blocking}" <-ExpirationDate Date | -NoExpiration> [-Notes This block was added via SWAIN by {Email}]"
+#    sp.run(block_query, shell=True)
+
 # main loop for SWAIN
 while True:
     Main_Query = input("\nThis tool will start the purging process by having you create a 'Content Search'. Or maybe you'd like to do something different?\n\n'1': Start the search for emails\n'2': Purge emails using the search created in option 1\n'3': Block an email address\n\n'Syntax': Syntax guide for Content Search\n'E': Exit\n'firstrun': Use this option when you have never used SWAIN on this particular computer before\n\nWhat would you like to do? ")
     if Main_Query == "1":
-        CSCT()
+        SWAIN_CSCT()
         print("Content search should take about 2 - 5 minutes")
         ProgressBar()
     elif Main_Query == "2":
