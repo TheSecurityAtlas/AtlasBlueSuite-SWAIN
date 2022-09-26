@@ -67,30 +67,34 @@ def SWAIN_block():
     sp.run(block_query, shell=True)
 
 def SWAIN_update():
-    command = powershell.exe
-    update_swain = f"Start-Process -FilePath {command!r} -Verb RunAs ; Set-ExecutionPolicy RemoteSigned ; Install-Module -Name ExchangeOnlineManagement ; Import-Module ExchangeOnlineManagement"
+    command = "powershell.exe"
+    update_swain = f"Start-Process -FilePath \"powershell.exe\" -Verb RunAs ; Set-ExecutionPolicy RemoteSigned ; Install-Module -Name ExchangeOnlineManagement ; Import-Module ExchangeOnlineManagement"
     sp.run(update_swain, shell=True)
     
 # main loop for SWAIN
 while True:
-    Main_Query = input("\nThis tool will start the purging process by having you create a 'Content Search'. Or maybe you'd like to do something different?\n\n'1': Start the search for emails\n'2': Purge emails using the search created in option 1\n'3': Block an email address\n\n'Syntax': Syntax guide for Content Search\n'E': Exit\n'firstrun': Use this option when you have never used SWAIN on this particular computer before\n\nWhat would you like to do? ")
-    if Main_Query == "1":
-        SWAIN_CSCT()
-        print("Content search should take about 2 - 5 minutes")
-        ProgressBar()
-    elif Main_Query == "2":
-        SWAIN()
-        print("Purge started!\nIf you would like to see the status of your purge -- please use 'Get-ComplianceSearchAction <insert name here>_purge' (remember to include '_purge')")
-    elif Main_Query == "3":
-        SWAIN_block()
-        time.sleep(2)
-    elif Main_Query == "Syntax":
-        print("\nhttps://github.com/TheSecurityAtlas/AtlasBlueSuite-SWAIN/blob/main/Syntax_Guide.txt\n\n\n\n")
-        time.sleep(2)
-    elif Main_Query == "E":
-        break
-    elif Main_Query == "firstrun":
-        SWAIN_update()
-    else:
-        print("\nPlease enter a valid option")
-        time.sleep(2.5)
+    try:
+      Main_Query = input("\nThis tool will start the purging process by having you create a 'Content Search'. Or maybe you'd like to do something different?\n\n'1': Start the search for emails\n'2': Purge emails using the search created in option 1\n'3': Block an email address\n\n'Syntax': Syntax guide for Content Search\n'E': Exit\n'firstrun': Use this option when you have never used SWAIN on this particular computer before\n\nWhat would you like to do? ")
+      if Main_Query == "1":
+          SWAIN_CSCT()
+          print("Content search should take about 2 - 5 minutes")
+          ProgressBar()
+      elif Main_Query == "2":
+          SWAIN()
+          print("Purge started!\nIf you would like to see the status of your purge -- please use 'Get-ComplianceSearchAction <insert name here>_purge' (remember to include '_purge')")
+      elif Main_Query == "3":
+          SWAIN_block()
+          time.sleep(2)
+      elif Main_Query == "Syntax":
+          print("\nhttps://github.com/TheSecurityAtlas/AtlasBlueSuite-SWAIN/blob/main/Syntax_Guide.txt\n\n\n\n")
+          time.sleep(2)
+      elif Main_Query == "E":
+          break
+      elif Main_Query == "firstrun":
+          SWAIN_update()
+      else:
+          print("\nPlease enter a valid option")
+          time.sleep(2.5)
+    except KeyboardInterrupt:
+      print("\nCtrl-C pressed, exiting...")
+      exit()
