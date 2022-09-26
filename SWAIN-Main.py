@@ -62,7 +62,8 @@ def SWAIN():
 def SWAIN_block():
     Email = input("Please provide your domain email address: ")
     Email_blocking = input("Please enter the email you would like to block: ")
-    block_query = f"Connect-ExchangeOnline -UserPrincipalName {Email} ; New-TenantAllowBlockListItems -ListType Sender -Block -Entries {Email_blocking} -NoExpiration -Notes This block was added via SWAIN by {Email} ; Disconnect-ExchangeOnline"
+    Email_notes = input("Please include any notes you would like to be submitted with the block: ")
+    block_query = f"Connect-ExchangeOnline -UserPrincipalName {Email} ; New-TenantAllowBlockListItems -ListType Sender -Block -Entries {Email_blocking!r} -NoExpiration -Notes {Email_notes!r}"
     sp.run(block_query, shell=True)
 
 # main loop for SWAIN
@@ -77,6 +78,7 @@ while True:
         print("Purge started!\nIf you would like to see the status of your purge -- please use 'Get-ComplianceSearchAction <insert name here>_purge' (remember to include '_purge')")
     elif Main_Query == "3":
         SWAIN_block()
+        time.sleep(2)
     elif Main_Query == "Syntax":
         print("\nhttps://github.com/TheSecurityAtlas/AtlasBlueSuite-SWAIN/blob/main/Syntax_Guide.txt\n\n\n\n")
         time.sleep(2)
