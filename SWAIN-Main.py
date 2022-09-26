@@ -66,6 +66,11 @@ def SWAIN_block():
     block_query = f"Connect-ExchangeOnline -UserPrincipalName {Email} ; New-TenantAllowBlockListItems -ListType Sender -Block -Entries {Email_blocking!r} -NoExpiration -Notes {Email_notes!r}"
     sp.run(block_query, shell=True)
 
+def SWAIN_update():
+    command = powershell.exe
+    update_swain = f"Start-Process -FilePath {command!r} -Verb RunAs ; Set-ExecutionPolicy RemoteSigned ; Install-Module -Name ExchangeOnlineManagement ; Import-Module ExchangeOnlineManagement"
+    sp.run(update_swain, shell=True)
+    
 # main loop for SWAIN
 while True:
     Main_Query = input("\nThis tool will start the purging process by having you create a 'Content Search'. Or maybe you'd like to do something different?\n\n'1': Start the search for emails\n'2': Purge emails using the search created in option 1\n'3': Block an email address\n\n'Syntax': Syntax guide for Content Search\n'E': Exit\n'firstrun': Use this option when you have never used SWAIN on this particular computer before\n\nWhat would you like to do? ")
@@ -85,7 +90,7 @@ while True:
     elif Main_Query == "E":
         break
     elif Main_Query == "firstrun":
-        print("This is a test string")
+        SWAIN_update()
     else:
         print("\nPlease enter a valid option")
         time.sleep(2.5)
