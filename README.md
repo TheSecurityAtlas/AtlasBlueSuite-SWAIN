@@ -11,7 +11,7 @@ Some dependencies are required for this tool to work in your environment (If we 
 Any feedback is welcomed.
 Syntax_Guide.txt will help you further understand what queries you can run with Content Search. Good luck!
 
-# **GUI is coming soon**
+
 
 Full list of dependencies can be found in BeforeFirstRun.txt
 
