@@ -74,7 +74,7 @@ def SWAIN_update():
 # main loop for SWAIN
 while True:
     try:
-      Main_Query = input("\nThis tool will start the purging process by having you create a 'Content Search'.\n Or maybe you'd like to do something different?\n\n\n'1': Start the search for emails\n'2': Purge emails using the search created in option 1\n'3': Block an email address\n\n'Syntax': Syntax guide for Content Search\n'firstrun': Use this option when you have never used SWAIN on this particular computer before\n\nWhat would you like to do? ")
+      Main_Query = input("\nThis tool will start the purging process by having you create a 'Content Search'.\nOr maybe you'd like to do something different?\n\n\n'1': Start the search for emails\n'2': Purge emails using the search created in option 1\n'3': Block an email address\n\n'Syntax': Syntax guide for Content Search\n'firstrun': Use this option when you have never used SWAIN on this particular computer before\n\nWhat would you like to do? ")
       if Main_Query == "1":
           SWAIN_CSCT()
           print("Content search should take about 2 - 5 minutes")
