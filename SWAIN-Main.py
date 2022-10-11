@@ -40,10 +40,11 @@ def SWAIN_CSCT():
     print("\n\nWelcome to the CSCT: Content Search Creation Tool")
     CSCT_Connect = input("Please provide your domain email address: ")
     CSCT_Name = input("What is the name of your Content Search? ")
+    CSCT_Description = input("Please add some notes for this search: ")
     CSCT_Location = input("Which mailboxes would you like to search? 'Please use 'All' to search all mailboxes' : ")
     Query_info()
     CSCT_Query = input("What are the search parameters? ")
-    sp.run(f"Connect-IPPSSession -UserPrincipalName {CSCT_Connect} ; New-ComplianceSearch -Name {CSCT_Name!r} -AllowNotFoundExchangeLocationsEnabled $true -ContentMatchQuery {CSCT_Query!r} -Description Search started from SWAIN by {CSCT_Name} -ExchangeLocation {CSCT_Location} ; Start-ComplianceSearch -Identity {CSCT_Name}", shell=True)
+    sp.run(f"Connect-IPPSSession -UserPrincipalName {CSCT_Connect} ; New-ComplianceSearch -Name {CSCT_Name!r} -AllowNotFoundExchangeLocationsEnabled $true -ContentMatchQuery {CSCT_Query!r} -Description {CSCT_Description!r} -ExchangeLocation {CSCT_Location} ; Start-ComplianceSearch -Identity {CSCT_Name}", shell=True)
     print(f"{CSCT_Name} has been started, Search will be complete soon, Happy Hunting!")
 
 # function for purging emails -- including powershell commands
