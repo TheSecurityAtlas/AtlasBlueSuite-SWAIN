@@ -30,7 +30,7 @@ def SWAIN_bar (iteration, total, prefix = '', suffix = '', decimals = 1, length 
         
 # progress bar second function
 def ProgressBar():
-    SWAIN_bar(0, l, prefix = 'Progress:', suffix = 'Complete', length = 50)
+    SWAIN_bar(0, l20, prefix = 'Progress:', suffix = 'Complete', length = 50)
     for i, item in enumerate(progress):
         time.sleep(1)
         SWAIN_bar(i + 1, l, prefix = 'Progress:', suffix = 'Complete', length = 50)
@@ -68,9 +68,7 @@ def SWAIN_block():
     sp.run(block_query, shell=True)
 
 def SWAIN_update():
-    command = "powershell.exe"
-    update_swain = f"Start-Process -FilePath \"powershell.exe\" -Verb RunAs ; Set-ExecutionPolicy RemoteSigned ; Install-Module -Name ExchangeOnlineManagement ; Import-Module ExchangeOnlineManagement"
-    sp.run(update_swain, shell=True)
+    print("\nPlease run the following commands in an Admin Powershell session:\n\nSet-ExecutionPolicy RemoteSigned\nInstall-Module -Name ExchangeOnlineManagement\nImport-Module ExchangeOnlineManagement\n")
     
 # main loop for SWAIN
 while True:
