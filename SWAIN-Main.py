@@ -26,7 +26,7 @@ def SWAIN_bar (iteration, total, prefix = '', suffix = '', decimals = 1, length 
     bar = fill * filledLength + '-' * (length - filledLength)
     print(f'\r{prefix} |{bar}| {percent}% {suffix}', end = printEnd)
     if iteration == total: 
-        print("\n")
+        print("")
         
 # progress bar second function
 def ProgressBar():
