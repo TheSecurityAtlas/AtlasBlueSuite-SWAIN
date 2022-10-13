@@ -30,7 +30,7 @@ def SWAIN_bar (iteration, total, prefix = '', suffix = '', decimals = 1, length 
         
 # progress bar second function
 def ProgressBar():
-    SWAIN_bar(0, l20, prefix = 'Progress:', suffix = 'Complete', length = 50)
+    SWAIN_bar(0, 120, prefix = 'Progress:', suffix = 'Complete', length = 50)
     for i, item in enumerate(progress):
         time.sleep(1)
         SWAIN_bar(i + 1, l, prefix = 'Progress:', suffix = 'Complete', length = 50)
