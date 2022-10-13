@@ -89,6 +89,7 @@ while True:
           time.sleep(2)
       elif Main_Query == "firstrun":
           SWAIN_update()
+          time.sleep(2.5)
       else:
           print("\nPlease enter a valid option")
           time.sleep(2.5)
